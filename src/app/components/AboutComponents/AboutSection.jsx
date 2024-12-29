@@ -3,11 +3,12 @@
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import Education from './Education';
-import dynamic from 'next/dynamic'
+// import dynamic from 'next/dynamic'
 
-const Spline = dynamic(() => import('@splinetool/react-spline'), {
-  ssr: false
-})
+// const Spline = dynamic(() => import('@splinetool/react-spline'), {
+//   ssr: false,
+//   loading: () => <div>Loading...</div>
+// })
 
 
 const paragraph = "I am a full stack web developer with a passion for creating interactive and responsive web applications. I have experience working with JavaScript react redux node.js express HTMLCSS and get I am a quick learner, and I am always looking to expand my knowledge and skill set. I am a team player, and I am excited to work with others to create amazing applications.";
@@ -42,7 +43,7 @@ const GridSection = () => {
           </div> */}
           <div className="relative h-[calc(100%-60px)] overflow-y-hidden overflow-x-visible">
             <div className="absolute inset-0 h-[calc(100%+60px)]">
-              <Spline scene="https://prod.spline.design/8p5ZY0Vwjik7wqs7/scene.splinecode" />
+              {/* <Spline scene="https://prod.spline.design/8p5ZY0Vwjik7wqs7/scene.splinecode" /> */}
             </div>
           </div>
         </div>

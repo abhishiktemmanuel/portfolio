@@ -2,11 +2,11 @@ import React from 'react'
 import Image from 'next/image'
 import hero from '../../../public/images/hero.png'
 import TypeAnimationComponent from './TypeAnimation' 
-import dynamic from 'next/dynamic'
+// import dynamic from 'next/dynamic'
 
-const Spline = dynamic(() => import('@splinetool/react-spline'), {
-  ssr: false
-})
+// const Spline = dynamic(() => import('@splinetool/react-spline'), {
+//   ssr: false
+// })
 
 
 
