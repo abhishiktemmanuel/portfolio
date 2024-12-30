@@ -47,7 +47,7 @@ const GridSection = () => {
             </div>
           </div>
         </div>
-
+ 
         {/* Right section */}
         <div className="w-full md:w-1/2 p-8">
           <div className="space-y-6">
