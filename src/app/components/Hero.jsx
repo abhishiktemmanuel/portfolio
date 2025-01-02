@@ -1,14 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import hero from '../../../public/images/hero.png'
 import TypeAnimationComponent from './TypeAnimation' 
-// import dynamic from 'next/dynamic'
-
-// const Spline = dynamic(() => import('@splinetool/react-spline'), {
-//   ssr: false
-// })
-
-
+import SplineComponent from './ui/SplineComponent'
 
 const strings = [
     'Abhishikt',
@@ -57,20 +50,10 @@ function Hero() {
         </div>
         
         {/* Image Column */}
-        <div className="lg:col-span-5 flex justify-center items-center lg:place-self-center">
-          <div className='rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[360px] lg:h-[360px] relative'>
-            <Image 
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              src={hero}
-              alt="hero"
-              width={300}
-              height={300}
-              priority
-            />
-          </div>
-          
-
+        <div className='lg:col-span-5 '>
+          <SplineComponent />
         </div>
+
       </div>
     </div>
   </section>
