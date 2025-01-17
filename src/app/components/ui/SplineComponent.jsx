@@ -16,7 +16,7 @@ export default function Scene() {
         a[href*="spline.design"] {
           display: none !important;
         }
-      `}</style>
+      `}</style>  
       
       <SplineComponent 
         style={{ pointerEvents: 'none' }}

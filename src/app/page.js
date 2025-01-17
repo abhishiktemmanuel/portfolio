@@ -21,26 +21,26 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Emmanuel Abhishikt | Full Stack Developer</title>
+        <title>Abhishikt Emmanuel| Full Stack Developer</title>
         <meta
           name="description"
-          content="Portfolio of Emmanuel Abhishikt - Full Stack Developer specializing in React, Next.js, and modern web development."
+          content="Portfolio of Abhishikt Emmanuel - Full Stack Developer specializing in React, Next.js, and modern web development."
         />
         <meta
           name="keywords"
-          content="Emmanuel Abhishikt, Full Stack Developer, React Developer, Next.js, Web Development"
+          content="Abhishikt Emmanuel, Full Stack Developer, React Developer, Next.js, Web Development"
         />
-        <meta name="author" content="Emmanuel Abhishikt" />
+        <meta name="author" content="Abhishikt Emmanuel Prakash" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         {/* Open Graph Tags */}
         <meta
           property="og:title"
-          content="Emmanuel Abhishikt | Full Stack Developer"
+          content="Abhishikt Emmanuel | Full Stack Developer"
         />
         <meta
           property="og:description"
-          content="Portfolio of Emmanuel Abhishikt - Full Stack Developer specializing in React, Next.js, and modern web development."
+          content="Portfolio of Abhishikt Emmanuel - Full Stack Developer specializing in React, Next.js, and modern web development."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://abhishikt.com" />
@@ -49,11 +49,11 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Emmanuel Abhishikt | Full Stack Developer"
+          content="Abhishikt Emmanuel | Full Stack Developer"
         />
         <meta
           name="twitter:description"
-          content="Portfolio of Emmanuel Abhishikt - Full Stack Developer specializing in React, Next.js, and modern web development."
+          content="Portfolio of Abhishikt Emmanuel - Full Stack Developer specializing in React, Next.js, and modern web development."
         />
       </Helmet>
 
