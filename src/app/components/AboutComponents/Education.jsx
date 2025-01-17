@@ -61,7 +61,7 @@ const Education = () => {
             ))}
         </div>
 
-        </div>
+      </div>
     );
     };
     

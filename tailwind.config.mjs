@@ -42,5 +42,24 @@ export default {
         ":root": colorVars,
       });
     }),
+    addVariablesForColors,
   ],
 };
+
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
+function addVariablesForColors(options) {
+  const addBase = options.addBase;
+  const theme = options.theme;
+
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}

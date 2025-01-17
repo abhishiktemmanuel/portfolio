@@ -74,6 +74,8 @@ export default function Home() {
           </div>
           <div className="min-h-screen snap-start snap-always" id="about">
             <AboutSection />
+          </div>
+          <div className="min-h-screen snap-start snap-always" id="portfoliio">
             <ContactPage />
             <PortfolioPage />
           </div>
