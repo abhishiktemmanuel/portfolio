@@ -10,7 +10,7 @@ const strings = [
   ]
 
   const handleDownload = () => {
-    window.open('https://drive.google.com/uc?export=download&id=1PhNzoe_wNWTihrr8fTV6qAIdT5RKoUnK', '_blank');
+    window.open('https://drive.google.com/file/d/12KWUPdhhy-K1qOXMWPzwQ_UI6v5C7aOb/view?usp=share_link');
   };
   
 function Hero() {
@@ -43,7 +43,7 @@ function Hero() {
             onClick={handleDownload}
             className="bg-[#181818] hover:bg-[#292929] text-white px-6 py-2 rounded-full font-semibold border border-white"
           >
-            Download CV
+            Resume
           </button>
 
           </div>
