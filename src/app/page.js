@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import AboutSection from "./components/AboutComponents/AboutSection";
 import ContactPage from "./components/contactPage/ContactPage";
-import PortfolioPage from "./components/portfolioComponents/PortfolioPage";
+import PortfolioPage from "./portfolio/page";
 import { BackgroundBeams } from "./components/ui/background-beams";
 import { Helmet } from "react-helmet-async";
 
@@ -77,7 +77,6 @@ export default function Home() {
           </div>
           <div className="min-h-screen snap-start snap-always" id="portfoliio">
             <ContactPage />
-            <PortfolioPage />
           </div>
         </div>
       </main>
