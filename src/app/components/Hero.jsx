@@ -10,7 +10,7 @@ const strings = [
   ]
 
   const handleDownload = () => {
-    window.open('https://drive.google.com/file/d/12KWUPdhhy-K1qOXMWPzwQ_UI6v5C7aOb/view?usp=share_link');
+    window.open('https://drive.google.com/file/d/1J06le2lwcTkIBiNMJsPcsnfBThGFXJw-/view?usp=sharing');
   };
   
 function Hero() {
