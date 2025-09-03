@@ -1,16 +1,19 @@
 'use client'
 
 import { useState, useEffect } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
+  const router = useRouter();
+  const pathname = usePathname();
 
   const navLinks = [
     { title: 'Home', href: '#home' },
     { title: 'About', href: '#about' },
-    { title: 'Portfolio', href: '#portfolio' },
+    { title: 'Portfolio', href: '/portfolio' },
     { title: 'Contact', href: '#contact' },
   ];
 
@@ -32,7 +35,6 @@ const Navbar = () => {
       } else if (currentScrollY > lastScrollY && currentScrollY > 20) {
         setIsVisible(false);
       }
-      
       setIsScrolled(currentScrollY > 20);
       lastScrollY = currentScrollY;
     };
@@ -55,11 +57,24 @@ const Navbar = () => {
 
   const handleNavClick = (e, href) => {
     e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
     setIsOpen(false);
+
+    if (href.startsWith('#')) {
+      // Handle hash navigation
+      if (pathname !== '/') {
+        // If we're not on the home page, navigate to home first
+        router.push('/' + href);
+      } else {
+        // If we're on the home page, just scroll to the element
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    } else {
+      // Handle regular page navigation
+      router.push(href);
+    }
   };
 
   return (
@@ -85,8 +100,8 @@ const Navbar = () => {
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
                   className={`transition-colors duration-300 font-medium ${
-                    isScrolled 
-                      ? 'text-white/90 hover:text-white' 
+                    isScrolled
+                      ? 'text-white/90 hover:text-white'
                       : 'text-white/80 hover:text-white'
                   } relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full`}
                 >
@@ -120,7 +135,7 @@ const Navbar = () => {
       </button>
 
       {/* Mobile Menu Overlay */}
-      <div 
+      <div
         className={`fixed inset-0 bg-black/90 backdrop-blur-lg z-40 transform transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         } md:hidden`}
@@ -131,17 +146,14 @@ const Navbar = () => {
               key={link.title}
               href={link.href}
               className={`text-2xl text-white hover:text-gray-300 transform transition-all duration-300 ${
-                isOpen 
-                  ? 'translate-x-0 opacity-100' 
+                isOpen
+                  ? 'translate-x-0 opacity-100'
                   : 'translate-x-full opacity-0'
               }`}
-              style={{ 
-                transitionDelay: `${index * 100}ms` 
+              style={{
+                transitionDelay: `${index * 100}ms`
               }}
-              onClick={(e) => {
-                handleNavClick(e, link.href);
-                setIsOpen(false);
-              }}
+              onClick={(e) => handleNavClick(e, link.href)}
             >
               {link.title}
             </a>
